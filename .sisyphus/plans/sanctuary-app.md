@@ -327,7 +327,7 @@ Wave FINAL (After ALL tasks — 4 parallel reviews, then user okay):
 
 ### Wave 2: Foundation (8 parallel tasks after Task 1)
 
-- [ ] 2. Adaptive Design System + Reusable UI Components
+- [x] 2. Adaptive Design System + Reusable UI Components
 
   **What to do**:
   - Create `Color+Extensions.swift` using Apple's **system-adaptive colors** (NOT the hardcoded hex values from the mobile-design skill):
@@ -510,7 +510,7 @@ Wave FINAL (After ALL tasks — 4 parallel reviews, then user okay):
 
   **Commit**: NO (groups with Wave 2 commit)
 
-- [ ] 4. Health Data Models + TDD
+- [x] 4. Health Data Models + TDD
 
   **What to do**:
   - TDD: Write tests FIRST, then implement models
@@ -582,7 +582,7 @@ Wave FINAL (After ALL tasks — 4 parallel reviews, then user okay):
 
   **Commit**: NO (groups with Wave 2 commit)
 
-- [ ] 5. Task Data Models + TDD
+- [x] 5. Task Data Models + TDD
 
   **What to do**:
   - TDD: Write tests FIRST, then implement models
@@ -674,7 +674,7 @@ Wave FINAL (After ALL tasks — 4 parallel reviews, then user okay):
 
   **Commit**: NO (groups with Wave 2 commit)
 
-- [ ] 6. Scheduling Data Models + TDD
+- [x] 6. Scheduling Data Models + TDD
 
   **What to do**:
   - TDD: Write tests FIRST, then implement models
@@ -745,7 +745,7 @@ Wave FINAL (After ALL tasks — 4 parallel reviews, then user okay):
 
   **Commit**: NO (groups with Wave 2 commit)
 
-- [ ] 7. Supplies Data Models + TDD
+- [x] 7. Supplies Data Models + TDD
 
   **What to do**:
   - TDD: Write tests FIRST, then implement models
@@ -810,7 +810,7 @@ Wave FINAL (After ALL tasks — 4 parallel reviews, then user okay):
 
   **Commit**: NO (groups with Wave 2 commit)
 
-- [ ] 8. Safety Data Models + TDD
+- [x] 8. Safety Data Models + TDD
 
   **What to do**:
   - TDD: Write tests FIRST, then implement models
@@ -871,7 +871,7 @@ Wave FINAL (After ALL tasks — 4 parallel reviews, then user okay):
 
   **Commit**: NO (groups with Wave 2 commit)
 
-- [ ] 9. Navigation Shell — TabView + NavigationStack Stubs
+- [x] 9. Navigation Shell — TabView + NavigationStack Stubs
 
   **What to do**:
   - Create `ContentView.swift` with a 5-tab `TabView`:

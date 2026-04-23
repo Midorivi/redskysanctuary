@@ -17,17 +17,14 @@ final class Animal {
     @Relationship(deleteRule: .cascade, inverse: \AnimalPhoto.animal)
     var photos: [AnimalPhoto]? = []
     
-    // TODO: Uncomment when HealthRecord model exists
-    // @Relationship(inverse: \HealthRecord.animal)
-    // var healthRecords: [HealthRecord]? = []
+    @Relationship(inverse: \HealthRecord.animal)
+    var healthRecords: [HealthRecord]? = []
     
-    // TODO: Uncomment when HealthSign model exists
-    // @Relationship(inverse: \HealthSign.animal)
-    // var healthSigns: [HealthSign]? = []
+    @Relationship(inverse: \HealthSign.animal)
+    var healthSigns: [HealthSign]? = []
     
-    // TODO: Uncomment when Reminder model exists
-    // @Relationship(inverse: \Reminder.relatedAnimal)
-    // var reminders: [Reminder]? = []
+    @Relationship(inverse: \Reminder.relatedAnimal)
+    var reminders: [Reminder]? = []
     
     init(
         name: String = "",

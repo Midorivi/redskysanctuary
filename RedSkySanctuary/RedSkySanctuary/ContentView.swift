@@ -2,21 +2,39 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        NavigationStack {
-            VStack(spacing: 12) {
-                Image(systemName: "sun.max.fill")
-                    .font(.system(size: 42))
-                    .symbolRenderingMode(.hierarchical)
-                    .foregroundStyle(.orange)
-
-                Text("Red Sky Sanctuary")
-                    .font(.system(.title, design: .rounded).bold())
+        TabView {
+            Tab("Dashboard", systemImage: "house.fill") {
+                NavigationStack {
+                    DashboardView()
+                }
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .padding()
-            .background(Color(.systemBackground))
-            .navigationTitle("Welcome")
+            
+            Tab("Animals", systemImage: "pawprint.fill") {
+                NavigationStack {
+                    AnimalsListView()
+                }
+            }
+            
+            Tab("Tasks", systemImage: "checklist") {
+                NavigationStack {
+                    TasksView()
+                }
+            }
+            
+            Tab("Supplies", systemImage: "shippingbox.fill") {
+                NavigationStack {
+                    SuppliesView()
+                }
+            }
+            
+            Tab("More", systemImage: "ellipsis.circle.fill") {
+                NavigationStack {
+                    MoreView()
+                }
+            }
         }
+        .tint(.blue)
+        .toolbarBackground(.ultraThinMaterial, for: .tabBar)
     }
 }
 
