@@ -27,6 +27,33 @@
       "agent": "Sisyphus-Junior",
       "category": "unspecified-high",
       "updated_at": "2026-04-23T20:09:00.502Z"
+    },
+    "todo:10": {
+      "task_key": "todo:10",
+      "task_label": "10",
+      "task_title": "Animal List View + Search/Filter",
+      "session_id": "ses_24408884cffe2ngDKi7QuruU5z",
+      "agent": "Sisyphus-Junior",
+      "category": "unspecified-high",
+      "updated_at": "2026-04-23T20:13:06.205Z"
+    },
+    "todo:11": {
+      "task_key": "todo:11",
+      "task_label": "11",
+      "task_title": "Animal Profile / Detail View",
+      "session_id": "ses_24405b1daffeR3zlkFVcSF4vj1",
+      "agent": "Sisyphus-Junior",
+      "category": "unspecified-high",
+      "updated_at": "2026-04-23T20:16:43.587Z"
+    },
+    "todo:12": {
+      "task_key": "todo:12",
+      "task_label": "12",
+      "task_title": "Animal Add/Edit Form with Photo Handling",
+      "session_id": "ses_244022e51ffewpZLjANvXmfumI",
+      "agent": "Sisyphus-Junior",
+      "category": "unspecified-high",
+      "updated_at": "2026-04-23T20:22:18.665Z"
     }
   }
 }

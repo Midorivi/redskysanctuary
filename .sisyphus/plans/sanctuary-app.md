@@ -935,7 +935,7 @@ Wave FINAL (After ALL tasks — 4 parallel reviews, then user okay):
 
 ### Wave 3: Core Feature Views (6 parallel after Wave 2)
 
-- [ ] 10. Animal List View + Search/Filter
+- [x] 10. Animal List View + Search/Filter
 
   **What to do**:
   - Create `AnimalsListView.swift` replacing the stub:
@@ -1013,7 +1013,7 @@ Wave FINAL (After ALL tasks — 4 parallel reviews, then user okay):
 
   **Commit**: NO (groups with Wave 3 commit)
 
-- [ ] 11. Animal Profile / Detail View
+- [x] 11. Animal Profile / Detail View
 
   **What to do**:
   - Create `AnimalDetailView.swift`:
@@ -1081,7 +1081,7 @@ Wave FINAL (After ALL tasks — 4 parallel reviews, then user okay):
 
   **Commit**: NO (groups with Wave 3 commit)
 
-- [ ] 12. Animal Add/Edit Form with Photo Handling
+- [x] 12. Animal Add/Edit Form with Photo Handling
 
   **What to do**:
   - Create `AnimalFormView.swift` (used for both add and edit):
