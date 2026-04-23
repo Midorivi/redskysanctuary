@@ -414,7 +414,7 @@ Wave FINAL (After ALL tasks — 4 parallel reviews, then user okay):
 
   **Commit**: NO (groups with Wave 2 commit)
 
-- [ ] 3. Animal Data Models + TDD
+- [x] 3. Animal Data Models + TDD
 
   **What to do**:
   - TDD: Write tests FIRST, then implement models
