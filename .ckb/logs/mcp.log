@@ -1,1 +1,2 @@
 2026-04-23T17:22:12Z [warn] Failed to load SCIP index | error=[INDEX_MISSING] SCIP index not found at index.scip: stat index.scip: no such file or directory path=index.scip
+2026-04-23T20:32:05Z [warn] Running in degraded mode | backend=lsp accuracy=medium

@@ -351,10 +351,7 @@ struct AnimalDetailView: View {
                     if (animal.healthRecords?.count ?? 0) > 3 {
                         Divider()
                         NavigationLink {
-                            Text("Coming Soon")
-                                .font(.title2)
-                                .foregroundStyle(.secondary)
-                                .navigationTitle("Health Records")
+                            HealthRecordListView(animal: animal)
                         } label: {
                             HStack {
                                 Text("View All")
@@ -434,6 +431,20 @@ struct AnimalDetailView: View {
                         }
                     }
                 }
+            }
+            Divider()
+            NavigationLink {
+                HealthSignListView(animal: animal)
+            } label: {
+                HStack {
+                    Text("View All Signs")
+                        .font(.subheadline.weight(.medium))
+                    Spacer()
+                    Image(systemName: "chevron.right")
+                        .font(.caption)
+                        .foregroundStyle(.tertiary)
+                }
+                .padding(.vertical, 10)
             }
         } label: {
             Label("Active Health Signs", systemImage: "exclamationmark.triangle")

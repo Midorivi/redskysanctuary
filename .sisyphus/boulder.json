@@ -54,6 +54,24 @@
       "agent": "Sisyphus-Junior",
       "category": "unspecified-high",
       "updated_at": "2026-04-23T20:22:18.665Z"
+    },
+    "todo:13": {
+      "task_key": "todo:13",
+      "task_label": "13",
+      "task_title": "Health Record Management (Vaccinations, Vet Visits, Symptoms)",
+      "session_id": "ses_243fb5599ffeIAUkOMLjm55pVK",
+      "agent": "Sisyphus-Junior",
+      "category": "unspecified-high",
+      "updated_at": "2026-04-23T20:29:27.573Z"
+    },
+    "todo:14": {
+      "task_key": "todo:14",
+      "task_label": "14",
+      "task_title": "Daily Task System (Template Builder + Daily Checklist)",
+      "session_id": "ses_243f681faffer3j5Bjuw6e0P1h",
+      "agent": "Sisyphus-Junior",
+      "category": "deep",
+      "updated_at": "2026-04-23T20:44:58.587Z"
     }
   }
 }

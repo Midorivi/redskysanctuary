@@ -1161,7 +1161,7 @@ Wave FINAL (After ALL tasks — 4 parallel reviews, then user okay):
 
   **Commit**: NO (groups with Wave 3 commit)
 
-- [ ] 13. Health Record Management (Vaccinations, Vet Visits, Symptoms)
+- [x] 13. Health Record Management (Vaccinations, Vet Visits, Symptoms)
 
   **What to do**:
   - Create `HealthRecordListView.swift` (shown from animal detail):
@@ -1239,7 +1239,7 @@ Wave FINAL (After ALL tasks — 4 parallel reviews, then user okay):
 
   **Commit**: NO (groups with Wave 3 commit)
 
-- [ ] 14. Daily Task System (Template Builder + Daily Checklist)
+- [x] 14. Daily Task System (Template Builder + Daily Checklist)
 
   **What to do**:
   - Create `TasksView.swift` replacing the stub — main Tasks tab:
