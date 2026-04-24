@@ -37,7 +37,7 @@ struct SuppliesView: View {
                         iconColor: .blue,
                         title: "Inventory",
                         subtitle: "\(allItems.count) items tracked"
-                    )
+                    ) { Image(systemName: "chevron.right").font(.caption).foregroundStyle(.tertiary) }
                 }
                 .padding(.horizontal, 16)
 
@@ -49,7 +49,7 @@ struct SuppliesView: View {
                         iconColor: .green,
                         title: "Expenses",
                         subtitle: "\(Self.currencyFormatter.string(from: NSNumber(value: thisMonthTotal)) ?? "$0") this month"
-                    )
+                    ) { Image(systemName: "chevron.right").font(.caption).foregroundStyle(.tertiary) }
                 }
                 .padding(.horizontal, 16)
             }
