@@ -203,7 +203,7 @@ struct SearchView: View {
     container.mainContext.insert(reminder)
     container.mainContext.insert(contact)
 
-    return NavigationStack {
+    NavigationStack {
         SearchView()
     }
     .modelContainer(container)
