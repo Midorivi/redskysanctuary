@@ -34,6 +34,12 @@ struct TasksView: View {
                 headerActions
                     .padding(.horizontal, 16)
 
+                maintenanceSection
+                    .padding(.horizontal, 16)
+
+                remindersSection
+                    .padding(.horizontal, 16)
+
                 todaysChecklistSection
                     .padding(.horizontal, 16)
 
@@ -80,6 +86,78 @@ struct TasksView: View {
             actionButton(title: "Add One-Off Task", systemImage: "plus.circle.fill") {
                 showAdHocPrompt = true
             }
+        }
+    }
+
+    private var maintenanceSection: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            Text("Maintenance")
+                .sectionHeader()
+
+            NavigationLink {
+                MaintenanceListView()
+            } label: {
+                SanctuaryCard {
+                    HStack(spacing: 12) {
+                        Image(systemName: "wrench.and.screwdriver.fill")
+                            .font(.title3)
+                            .symbolRenderingMode(.hierarchical)
+                            .foregroundStyle(.blue)
+                            .frame(width: 28)
+
+                        VStack(alignment: .leading, spacing: 2) {
+                            Text("Maintenance Scheduler")
+                                .font(.headline)
+                            Text("Property tasks & animal care routines")
+                                .font(.subheadline)
+                                .foregroundStyle(.secondary)
+                        }
+
+                        Spacer()
+
+                        Image(systemName: "chevron.right")
+                            .font(.caption)
+                            .foregroundStyle(.tertiary)
+                    }
+                }
+            }
+            .buttonStyle(.plain)
+        }
+    }
+
+    private var remindersSection: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            Text("Reminders")
+                .sectionHeader()
+
+            NavigationLink {
+                RemindersListView()
+            } label: {
+                SanctuaryCard {
+                    HStack(spacing: 12) {
+                        Image(systemName: "bell.badge.fill")
+                            .font(.title3)
+                            .symbolRenderingMode(.hierarchical)
+                            .foregroundStyle(.orange)
+                            .frame(width: 28)
+
+                        VStack(alignment: .leading, spacing: 2) {
+                            Text("Reminders")
+                                .font(.headline)
+                            Text("One-time & recurring reminders")
+                                .font(.subheadline)
+                                .foregroundStyle(.secondary)
+                        }
+
+                        Spacer()
+
+                        Image(systemName: "chevron.right")
+                            .font(.caption)
+                            .foregroundStyle(.tertiary)
+                    }
+                }
+            }
+            .buttonStyle(.plain)
         }
     }
 

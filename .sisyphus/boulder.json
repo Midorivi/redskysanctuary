@@ -72,6 +72,42 @@
       "agent": "Sisyphus-Junior",
       "category": "deep",
       "updated_at": "2026-04-23T20:44:58.587Z"
+    },
+    "todo:15": {
+      "task_key": "todo:15",
+      "task_label": "15",
+      "task_title": "Maintenance Scheduler",
+      "session_id": "ses_2405aa917ffexd4I6X3dpnbISs",
+      "agent": "Sisyphus-Junior",
+      "category": "unspecified-high",
+      "updated_at": "2026-04-24T13:22:53.672Z"
+    },
+    "todo:16": {
+      "task_key": "todo:16",
+      "task_label": "16",
+      "task_title": "Custom Reminder System",
+      "session_id": "ses_24056b275ffecqEdwN7FY1FyTE",
+      "agent": "Sisyphus-Junior",
+      "category": "unspecified-high",
+      "updated_at": "2026-04-24T13:29:04.766Z"
+    },
+    "todo:17": {
+      "task_key": "todo:17",
+      "task_label": "17",
+      "task_title": "Inventory Management",
+      "session_id": "ses_24051186bffeqBogmS82jxxad6",
+      "agent": "Sisyphus-Junior",
+      "category": "unspecified-high",
+      "updated_at": "2026-04-24T13:34:37.339Z"
+    },
+    "todo:18": {
+      "task_key": "todo:18",
+      "task_label": "18",
+      "task_title": "Expense Tracker",
+      "session_id": "ses_2404bcfedffeUWi0Dx8BW0gCzS",
+      "agent": "Sisyphus-Junior",
+      "category": "unspecified-high",
+      "updated_at": "2026-04-24T13:40:53.932Z"
     }
   }
 }

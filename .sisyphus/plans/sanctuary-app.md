@@ -1323,7 +1323,7 @@ Wave FINAL (After ALL tasks — 4 parallel reviews, then user okay):
 
   **Commit**: NO (groups with Wave 3 commit)
 
-- [ ] 15. Maintenance Scheduler
+- [x] 15. Maintenance Scheduler
 
   **What to do**:
   - Create `MaintenanceListView.swift`:
@@ -1395,7 +1395,7 @@ Wave FINAL (After ALL tasks — 4 parallel reviews, then user okay):
 
 ### Wave 4: Secondary Feature Views (5 parallel after Wave 3)
 
-- [ ] 16. Custom Reminder System
+- [x] 16. Custom Reminder System
 
   **What to do**:
   - Create `RemindersListView.swift` (accessible from Tasks tab or More tab):
@@ -1459,7 +1459,7 @@ Wave FINAL (After ALL tasks — 4 parallel reviews, then user okay):
 
   **Commit**: NO (groups with Wave 4 commit)
 
-- [ ] 17. Inventory Management
+- [x] 17. Inventory Management
 
   **What to do**:
   - Create `InventoryListView.swift` (in Supplies tab):
@@ -1523,7 +1523,7 @@ Wave FINAL (After ALL tasks — 4 parallel reviews, then user okay):
 
   **Commit**: NO (groups with Wave 4 commit)
 
-- [ ] 18. Expense Tracker
+- [x] 18. Expense Tracker
 
   **What to do**:
   - Create `ExpenseListView.swift` (in Supplies tab, alongside inventory):
