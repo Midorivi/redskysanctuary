@@ -119,3 +119,10 @@
 - No @Attribute(.unique) or .deny delete rules used (CloudKit compatibility)
 - All tests use Swift Testing framework (@Test, @Suite, #expect, FetchDescriptor with predicates)
 - Safety system enables quick access to emergency contacts and species-specific emergency protocols during critical situations
+
+## Post-implementation Branding & Device Testing
+- Generated a branded AppIcon set in `RedSkySanctuary/RedSkySanctuary/Assets.xcassets/AppIcon.appiconset/` with all required iPhone + marketing PNG sizes.
+- Icon concept uses a sky-blue to sanctuary-red gradient, warm sun, rolling hill, and stylized white horse silhouette to reflect Red + Sky and the sanctuary setting.
+- Updated `AppIcon.appiconset/Contents.json` with real filenames so Xcode can package the icon immediately.
+- Added `docs/iphone-testing.md` with the practical install path: use direct Xcode install on iPhone now, then move to TestFlight once a paid Apple Developer account is in place.
+- Important distribution note: the app does not need to be on the App Store to run fully on a phone; Xcode signing/install is enough for personal testing.
