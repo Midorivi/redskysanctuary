@@ -76,7 +76,7 @@ struct NotificationManagerTests {
         let manager = NotificationManager(notificationCenter: center, calendar: fixedCalendar)
         manager.isAuthorized = true
         let nextVisitDate = Date(timeIntervalSince1970: 1_700_100_000)
-        let record = HealthRecord(title: "Spring vaccines", nextVisitDate: nextVisitDate)
+        let record = HealthRecord(recordType: RecordType.vetVisit, title: "Spring vaccines", nextVisitDate: nextVisitDate)
 
         let identifier = await manager.scheduleVetVisitReminder(for: record)
 

@@ -15,7 +15,7 @@ struct SearchViewModelTests {
     @Test("search returns results grouped by type")
     func searchReturnsGroupedResults() {
         let animal = Animal(name: "Bella", animalType: "horse")
-        let record = HealthRecord(title: "Vaccination", recordType: "vaccination")
+        let record = HealthRecord(recordType: "vaccination", title: "Vaccination")
         let inventory = InventoryItem(name: "Horse Feed", category: "feed")
         let reminder = Reminder(title: "Farrier appointment")
         let contact = EmergencyContact(name: "Dr. Smith", role: "veterinarian")

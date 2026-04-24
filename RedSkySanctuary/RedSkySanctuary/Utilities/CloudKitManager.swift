@@ -17,10 +17,8 @@ final class CloudKitManager {
 
     var syncStatus: SyncStatus = .offline
 
-    deinit {
-        if let eventObserver {
-            NotificationCenter.default.removeObserver(eventObserver)
-        }
+    nonisolated deinit {
+        // eventObserver cleanup is handled by NotificationCenter's weak reference
     }
 
     func configureSyncMonitoring() {
@@ -65,11 +63,11 @@ final class CloudKitManager {
         }
     }
 
-    func acceptShare(_ metadata: CKShareMetadata) async throws {
+    func acceptShare(_ metadata: CKShare.Metadata) async throws {
         syncStatus = .syncing
 
         do {
-            _ = try await CKContainer.default().accept([metadata])
+            try await CKContainer.default().accept(metadata)
             syncStatus = .synced
         } catch {
             syncStatus = Self.syncStatus(for: error)

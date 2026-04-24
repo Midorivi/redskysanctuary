@@ -192,7 +192,7 @@ struct SearchView: View {
     let container = try! ModelContainer(for: Animal.self, HealthRecord.self, InventoryItem.self, Reminder.self, EmergencyContact.self, configurations: config)
 
     let animal = Animal(name: "Bella", animalType: "horse", breed: "Thoroughbred")
-    let record = HealthRecord(title: "Vaccination", recordType: "vaccination", notes: "Annual checkup")
+    let record = HealthRecord(recordType: "vaccination", title: "Vaccination", notes: "Annual checkup")
     let inventory = InventoryItem(name: "Horse Feed", category: "feed", quantity: 50)
     let reminder = Reminder(title: "Farrier appointment", notes: "Schedule next visit")
     let contact = EmergencyContact(name: "Dr. Smith", role: "veterinarian", phone: "555-0123")
