@@ -29,8 +29,9 @@ final class CloudKitManager {
             object: nil,
             queue: .main
         ) { [weak self] notification in
+            let userInfo = notification.userInfo
             MainActor.assumeIsolated {
-                self?.handleCloudKitEvent(notification)
+                self?.handleCloudKitEvent(userInfo: userInfo)
             }
         }
     }
@@ -126,9 +127,9 @@ final class CloudKitManager {
         }
     }
 
-    private func handleCloudKitEvent(_ notification: Notification) {
+    private func handleCloudKitEvent(userInfo: [AnyHashable: Any]?) {
         guard
-            let event = notification.userInfo?[NSPersistentCloudKitContainer.eventNotificationUserInfoKey]
+            let event = userInfo?[NSPersistentCloudKitContainer.eventNotificationUserInfoKey]
                 as? NSPersistentCloudKitContainer.Event
         else {
             return
