@@ -4,7 +4,7 @@ import Foundation
 @Model
 final class HealthSign {
     var id: UUID = UUID()
-    var date: Date = .now
+    var date: Date = Date.now
     var symptom: String = ""
     var severity: String = "mild"
     var notes: String? = nil

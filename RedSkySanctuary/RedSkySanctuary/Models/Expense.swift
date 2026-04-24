@@ -5,7 +5,7 @@ import Foundation
 final class Expense {
     var id: UUID = UUID()
     var amount: Double = 0
-    var date: Date = .now
+    var date: Date = Date.now
     var category: String = "other"
     var expenseDescription: String? = nil
     var notes: String? = nil

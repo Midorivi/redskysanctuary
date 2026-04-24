@@ -7,7 +7,7 @@ final class TaskTemplate {
     var name: String = ""
     var isRecurring: Bool = true
     var recurrencePattern: String? = "daily"
-    var createdAt: Date = .now
+    var createdAt: Date = Date.now
     
     @Relationship(deleteRule: .cascade, inverse: \TaskTemplateItem.template)
     var templateItems: [TaskTemplateItem]? = []

@@ -12,7 +12,7 @@ final class AnimalPhoto {
     var thumbnailData: Data? = nil
     
     var caption: String? = nil
-    var dateAdded: Date = .now
+    var dateAdded: Date = Date.now
     var isPrimary: Bool = false
     
     var animal: Animal?

@@ -6,7 +6,7 @@ final class Reminder {
     var id: UUID = UUID()
     var title: String = ""
     var notes: String? = nil
-    var date: Date = .now
+    var date: Date = Date.now
     var isRecurring: Bool = false
     var recurrencePattern: String? = nil
     var recurrenceEndDate: Date? = nil

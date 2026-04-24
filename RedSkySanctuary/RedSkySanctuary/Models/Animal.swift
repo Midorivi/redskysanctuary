@@ -8,7 +8,7 @@ final class Animal {
     var animalType: String = ""
     var breed: String? = nil
     var birthday: Date? = nil
-    var dateAdded: Date = .now
+    var dateAdded: Date = Date.now
     var status: String = "active"
     var dateOfPassing: Date? = nil
     var feedingInstructions: String? = nil

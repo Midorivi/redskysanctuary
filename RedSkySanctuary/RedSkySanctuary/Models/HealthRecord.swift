@@ -4,7 +4,7 @@ import Foundation
 @Model
 final class HealthRecord {
     var id: UUID = UUID()
-    var date: Date = .now
+    var date: Date = Date.now
     var recordType: String = ""
     var title: String = ""
     var notes: String? = nil

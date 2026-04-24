@@ -4,7 +4,7 @@ import Foundation
 @Model
 final class TaskInstance {
     var id: UUID = UUID()
-    var date: Date = .now
+    var date: Date = Date.now
     var isAdHoc: Bool = false
     
     var template: TaskTemplate?
