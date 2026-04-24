@@ -1,7 +1,7 @@
 import SwiftUI
 import SwiftData
 
-@Observable
+@MainActor @Observable
 final class AnimalFormViewModel {
     var name: String = ""
     var animalType: String = ""

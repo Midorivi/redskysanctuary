@@ -13,7 +13,7 @@ struct SearchResultGroup {
     let results: [SearchResult]
 }
 
-@Observable
+@MainActor @Observable
 final class SearchViewModel {
     var results: [SearchResultGroup] = []
     var recentSearches: [String] = []

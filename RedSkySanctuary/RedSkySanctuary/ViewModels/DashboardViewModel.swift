@@ -1,7 +1,7 @@
 import Foundation
 import Observation
 
-@Observable
+@MainActor @Observable
 final class DashboardViewModel {
 
     private static let severityOrder: [String: Int] = [

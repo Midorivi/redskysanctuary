@@ -2,7 +2,7 @@ import Foundation
 import Observation
 import SwiftData
 
-@Observable
+@MainActor @Observable
 final class TasksViewModel {
     private let currentUserName: String
     private let calendar: Calendar

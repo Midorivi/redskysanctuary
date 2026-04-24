@@ -4,6 +4,7 @@ import Testing
 
 @testable import RedSkySanctuary
 
+@MainActor
 @Suite("DashboardViewModel Tests")
 struct DashboardViewModelTests {
 

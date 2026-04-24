@@ -2,6 +2,7 @@ import Testing
 import SwiftData
 @testable import RedSkySanctuary
 
+@MainActor
 @Suite("HealthViewModel Tests")
 struct HealthViewModelTests {
 

@@ -4,6 +4,7 @@ import Testing
 
 @testable import RedSkySanctuary
 
+@MainActor
 @Suite("SearchViewModel Tests")
 struct SearchViewModelTests {
 

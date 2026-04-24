@@ -1,7 +1,7 @@
 import SwiftUI
 import SwiftData
 
-@Observable
+@MainActor @Observable
 final class HealthViewModel {
 
     // MARK: - Health Records
