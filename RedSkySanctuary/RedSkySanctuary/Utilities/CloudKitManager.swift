@@ -29,9 +29,12 @@ final class CloudKitManager {
             object: nil,
             queue: .main
         ) { [weak self] notification in
-            let userInfo = notification.userInfo
+            let event = notification.userInfo?[NSPersistentCloudKitContainer.eventNotificationUserInfoKey]
+                as? NSPersistentCloudKitContainer.Event
+            let ended = event?.endDate != nil
+            let errorMessage = event?.error?.localizedDescription
             MainActor.assumeIsolated {
-                self?.handleCloudKitEvent(userInfo: userInfo)
+                self?.applySyncStatus(ended: ended, errorMessage: errorMessage, hasEvent: event != nil)
             }
         }
     }
@@ -127,23 +130,14 @@ final class CloudKitManager {
         }
     }
 
-    private func handleCloudKitEvent(userInfo: [AnyHashable: Any]?) {
-        guard
-            let event = userInfo?[NSPersistentCloudKitContainer.eventNotificationUserInfoKey]
-                as? NSPersistentCloudKitContainer.Event
-        else {
-            return
-        }
-
-        if let error = event.error {
-            syncStatus = Self.syncStatus(for: error)
-            return
-        }
-
-        if event.endDate == nil {
-            syncStatus = .syncing
-        } else {
+    private func applySyncStatus(ended: Bool, errorMessage: String?, hasEvent: Bool) {
+        guard hasEvent else { return }
+        if let errorMessage {
+            syncStatus = .error(errorMessage)
+        } else if ended {
             syncStatus = .synced
+        } else {
+            syncStatus = .syncing
         }
     }
 
