@@ -2,27 +2,30 @@ import SwiftUI
 
 struct MoreView: View {
     var body: some View {
-        VStack(spacing: 24) {
-            VStack(spacing: 12) {
-                Image(systemName: "ellipsis.circle.fill")
-                    .font(.system(size: 48))
-                    .symbolRenderingMode(.hierarchical)
-                    .foregroundStyle(.blue)
-                
-                Text("More")
-                    .font(.system(.title3, design: .rounded).bold())
-                    .foregroundStyle(.primary)
-                
-                Text("Coming Soon")
-                    .font(.subheadline)
-                    .foregroundStyle(.secondary)
+        List {
+            Section("Safety") {
+                NavigationLink {
+                    EmergencyView()
+                } label: {
+                    HStack(spacing: 12) {
+                        Image(systemName: "cross.case.fill")
+                            .font(.title3)
+                            .foregroundStyle(.red)
+                            .symbolRenderingMode(.hierarchical)
+                            .frame(width: 28)
+
+                        VStack(alignment: .leading, spacing: 2) {
+                            Text("Emergency")
+                                .font(.body)
+                            Text("Contacts & protocols")
+                                .font(.subheadline)
+                                .foregroundStyle(.secondary)
+                        }
+                    }
+                    .padding(.vertical, 4)
+                }
             }
-            
-            Spacer()
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topCenter)
-        .padding(16)
-        .background(Color(.systemBackground))
         .navigationTitle("More")
         .navigationBarTitleDisplayMode(.large)
     }

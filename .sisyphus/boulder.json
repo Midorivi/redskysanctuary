@@ -108,6 +108,24 @@
       "agent": "Sisyphus-Junior",
       "category": "unspecified-high",
       "updated_at": "2026-04-24T13:40:53.932Z"
+    },
+    "todo:19": {
+      "task_key": "todo:19",
+      "task_label": "19",
+      "task_title": "Emergency System (Contacts + Protocols)",
+      "session_id": "ses_2404639d2ffeof2q7NfW027PXs",
+      "agent": "Sisyphus-Junior",
+      "category": "unspecified-high",
+      "updated_at": "2026-04-24T13:50:49.440Z"
+    },
+    "todo:20": {
+      "task_key": "todo:20",
+      "task_label": "20",
+      "task_title": "Local Notification Integration",
+      "session_id": "ses_2403d5f5fffe1DEQMMoWaVfpWe",
+      "agent": "Sisyphus-Junior",
+      "category": "deep",
+      "updated_at": "2026-04-24T13:56:33.197Z"
     }
   }
 }

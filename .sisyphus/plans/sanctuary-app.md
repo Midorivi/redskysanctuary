@@ -1589,7 +1589,7 @@ Wave FINAL (After ALL tasks — 4 parallel reviews, then user okay):
 
   **Commit**: NO (groups with Wave 4 commit)
 
-- [ ] 19. Emergency System (Contacts + Protocols)
+- [x] 19. Emergency System (Contacts + Protocols)
 
   **What to do**:
   - Create `EmergencyView.swift` (in More tab):
@@ -1656,7 +1656,7 @@ Wave FINAL (After ALL tasks — 4 parallel reviews, then user okay):
 
   **Commit**: NO (groups with Wave 4 commit)
 
-- [ ] 20. Local Notification Integration
+- [x] 20. Local Notification Integration
 
   **What to do**:
   - Create `NotificationManager.swift` as an `@Observable` class:
