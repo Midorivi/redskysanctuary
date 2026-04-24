@@ -2,16 +2,16 @@ import Foundation
 import Observation
 import UserNotifications
 
-protocol UserNotificationCenterProtocol: AnyObject {
-    func requestAuthorization(options: UNAuthorizationOptions, completionHandler: @escaping (Bool, Error?) -> Void)
-    func add(_ request: UNNotificationRequest, withCompletionHandler completionHandler: ((Error?) -> Void)?)
+protocol UserNotificationCenterProtocol: AnyObject, Sendable {
+    func requestAuthorization(options: UNAuthorizationOptions, completionHandler: @escaping @Sendable (Bool, (any Error)?) -> Void)
+    func add(_ request: UNNotificationRequest, withCompletionHandler completionHandler: (@Sendable ((any Error)?) -> Void)?)
     func removePendingNotificationRequests(withIdentifiers identifiers: [String])
     func setNotificationCategories(_ categories: Set<UNNotificationCategory>)
 }
 
 extension UNUserNotificationCenter: UserNotificationCenterProtocol {}
 
-@Observable
+@MainActor @Observable
 final class NotificationManager {
 
     static let reminderCategoryIdentifier = "sanctuary.reminder"
@@ -118,7 +118,8 @@ final class NotificationManager {
         body: String?,
         date: Date
     ) async -> String? {
-        let hasAccess = isAuthorized || await requestPermission()
+        var hasAccess = isAuthorized
+        if !hasAccess { hasAccess = await requestPermission() }
         guard hasAccess else { return nil }
 
         let content = UNMutableNotificationContent()
@@ -144,7 +145,8 @@ final class NotificationManager {
         title: String,
         body: String?
     ) async -> String? {
-        let hasAccess = isAuthorized || await requestPermission()
+        var hasAccess = isAuthorized
+        if !hasAccess { hasAccess = await requestPermission() }
         guard hasAccess else { return nil }
 
         let content = UNMutableNotificationContent()
@@ -165,7 +167,7 @@ final class NotificationManager {
     }
 
     private func requestAuthorization(options: UNAuthorizationOptions) async throws -> Bool {
-        try await withCheckedThrowingContinuation { continuation in
+        try await withCheckedThrowingContinuation { (continuation: CheckedContinuation<Bool, any Error>) in
             notificationCenter.requestAuthorization(options: options) { granted, error in
                 if let error {
                     continuation.resume(throwing: error)
@@ -177,7 +179,7 @@ final class NotificationManager {
     }
 
     private func addNotificationRequest(_ request: UNNotificationRequest) async throws {
-        try await withCheckedThrowingContinuation { continuation in
+        try await withCheckedThrowingContinuation { (continuation: CheckedContinuation<Void, any Error>) in
             notificationCenter.add(request) { error in
                 if let error {
                     continuation.resume(throwing: error)

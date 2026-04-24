@@ -4,7 +4,7 @@ import Observation
 import SwiftData
 import SwiftUI
 
-@Observable
+@MainActor @Observable
 final class CloudKitManager {
     enum SyncStatus: Equatable {
         case synced
@@ -31,7 +31,9 @@ final class CloudKitManager {
             object: nil,
             queue: .main
         ) { [weak self] notification in
-            self?.handleCloudKitEvent(notification)
+            MainActor.assumeIsolated {
+                self?.handleCloudKitEvent(notification)
+            }
         }
     }
 
@@ -75,12 +77,12 @@ final class CloudKitManager {
         }
     }
 
-    static func makeContainer() -> ModelContainer {
+    nonisolated static func makeContainer() -> ModelContainer {
         // Default to local-only container for Personal Team compatibility
         return makeLocalContainer()
     }
 
-    static func makeLocalContainer() -> ModelContainer {
+    nonisolated static func makeLocalContainer() -> ModelContainer {
         let schema = Schema([
             Animal.self, AnimalPhoto.self,
             HealthRecord.self, HealthSign.self,
@@ -103,7 +105,7 @@ final class CloudKitManager {
         }
     }
 
-    static func makeCloudKitContainer() -> ModelContainer {
+    nonisolated static func makeCloudKitContainer() -> ModelContainer {
         let schema = Schema([
             Animal.self, AnimalPhoto.self,
             HealthRecord.self, HealthSign.self,
@@ -146,7 +148,7 @@ final class CloudKitManager {
         }
     }
 
-    private static func syncStatus(for error: Error) -> SyncStatus {
+    private nonisolated static func syncStatus(for error: Error) -> SyncStatus {
         guard let cloudKitError = error as? CKError else {
             return .error(error.localizedDescription)
         }

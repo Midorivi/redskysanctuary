@@ -4,6 +4,7 @@ import UserNotifications
 
 @testable import RedSkySanctuary
 
+@MainActor
 @Suite("NotificationManager Tests")
 struct NotificationManagerTests {
 
@@ -114,7 +115,7 @@ private let fixedCalendar: Calendar = {
     return calendar
 }()
 
-private final class MockUserNotificationCenter: UserNotificationCenterProtocol {
+private final class MockUserNotificationCenter: UserNotificationCenterProtocol, @unchecked Sendable {
     var authorizationGranted = true
     var requestAuthorizationCallCount = 0
     var requestedOptions: UNAuthorizationOptions = []
@@ -122,13 +123,13 @@ private final class MockUserNotificationCenter: UserNotificationCenterProtocol {
     var removedIdentifiers: [String] = []
     var categories: Set<UNNotificationCategory> = []
 
-    func requestAuthorization(options: UNAuthorizationOptions, completionHandler: @escaping (Bool, Error?) -> Void) {
+    func requestAuthorization(options: UNAuthorizationOptions, completionHandler: @escaping @Sendable (Bool, (any Error)?) -> Void) {
         requestAuthorizationCallCount += 1
         requestedOptions = options
         completionHandler(authorizationGranted, nil)
     }
 
-    func add(_ request: UNNotificationRequest, withCompletionHandler completionHandler: ((Error?) -> Void)?) {
+    func add(_ request: UNNotificationRequest, withCompletionHandler completionHandler: (@Sendable ((any Error)?) -> Void)?) {
         addedRequests.append(request)
         completionHandler?(nil)
     }
