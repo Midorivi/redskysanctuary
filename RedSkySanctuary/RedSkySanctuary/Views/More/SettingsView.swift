@@ -9,6 +9,7 @@ struct SettingsView: View {
     @State private var showClearConfirmation = false
     @State private var showExportSheet = false
     @State private var clearCount = 0
+    @State private var clearError: String?
 
     @Environment(\.modelContext) private var modelContext
 
@@ -153,7 +154,7 @@ struct SettingsView: View {
             try modelContext.save()
             clearCount += 1
         } catch {
-            print("Failed to clear data: \(error)")
+            clearError = error.localizedDescription
         }
     }
 }

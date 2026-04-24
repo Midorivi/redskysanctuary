@@ -2,10 +2,18 @@
   "active_plan": "/root/projects/redskysanctuary/.sisyphus/plans/sanctuary-app.md",
   "started_at": "2026-04-23T19:25:37.397Z",
   "session_ids": [
-    "ses_244a3864fffe4Y3XC6A0mmPSJa"
+    "ses_244a3864fffe4Y3XC6A0mmPSJa",
+    "ses_240222002ffezNbrpXOskzaYM5",
+    "ses_24021b259ffeT3iPfdaCUg2jRT",
+    "ses_240214608ffemnh6F3P1WE5kzd",
+    "ses_24020e3d5ffeVFvUNtLCXCXII2"
   ],
   "session_origins": {
-    "ses_244a3864fffe4Y3XC6A0mmPSJa": "direct"
+    "ses_244a3864fffe4Y3XC6A0mmPSJa": "direct",
+    "ses_240222002ffezNbrpXOskzaYM5": "appended",
+    "ses_24021b259ffeT3iPfdaCUg2jRT": "appended",
+    "ses_240214608ffemnh6F3P1WE5kzd": "appended",
+    "ses_24020e3d5ffeVFvUNtLCXCXII2": "appended"
   },
   "plan_name": "sanctuary-app",
   "agent": "atlas",
@@ -162,6 +170,14 @@
       "agent": "Sisyphus-Junior",
       "category": "unspecified-high",
       "updated_at": "2026-04-24T14:19:09.576Z"
+    },
+    "final-wave:f1": {
+      "task_key": "final-wave:f1",
+      "task_label": "F1",
+      "task_title": "**Plan Compliance Audit** — `oracle`",
+      "session_id": "ses_24021b259ffeT3iPfdaCUg2jRT",
+      "agent": "oracle",
+      "updated_at": "2026-04-24T14:25:25.449Z"
     }
   }
 }
