@@ -31,10 +31,11 @@ final class CloudKitManager {
         ) { [weak self] notification in
             let event = notification.userInfo?[NSPersistentCloudKitContainer.eventNotificationUserInfoKey]
                 as? NSPersistentCloudKitContainer.Event
+            let hasEvent = event != nil
             let ended = event?.endDate != nil
             let errorMessage = event?.error?.localizedDescription
             MainActor.assumeIsolated {
-                self?.applySyncStatus(ended: ended, errorMessage: errorMessage, hasEvent: event != nil)
+                self?.applySyncStatus(ended: ended, errorMessage: errorMessage, hasEvent: hasEvent)
             }
         }
     }
