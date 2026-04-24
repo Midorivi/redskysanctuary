@@ -1732,7 +1732,7 @@ Wave FINAL (After ALL tasks — 4 parallel reviews, then user okay):
 
 ### Wave 5: Integration (4 parallel after Wave 4)
 
-- [ ] 21. Dashboard — Today's Overview
+- [x] 21. Dashboard — Today's Overview
 
   **What to do**:
   - Create `DashboardView.swift` replacing the stub:
@@ -1810,7 +1810,7 @@ Wave FINAL (After ALL tasks — 4 parallel reviews, then user okay):
 
   **Commit**: NO (groups with Wave 5 commit)
 
-- [ ] 22. CloudKit Sharing (Spike + Implementation)
+- [x] 22. CloudKit Sharing (Spike + Implementation)
 
   **What to do**:
   - **SPIKE PHASE** (research + prototype):
@@ -1890,7 +1890,7 @@ Wave FINAL (After ALL tasks — 4 parallel reviews, then user okay):
 
   **Commit**: NO (groups with Wave 5 commit)
 
-- [ ] 23. Global Search
+- [x] 23. Global Search
 
   **What to do**:
   - Create `SearchView.swift` (accessible via search icon in navigation or spotlight):
@@ -1948,7 +1948,7 @@ Wave FINAL (After ALL tasks — 4 parallel reviews, then user okay):
 
   **Commit**: NO (groups with Wave 5 commit)
 
-- [ ] 24. Settings + Onboarding
+- [x] 24. Settings + Onboarding
 
   **What to do**:
   - Create `MoreView.swift` replacing the stub (More tab):

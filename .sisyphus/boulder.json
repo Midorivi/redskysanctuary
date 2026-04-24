@@ -126,6 +126,42 @@
       "agent": "Sisyphus-Junior",
       "category": "deep",
       "updated_at": "2026-04-24T13:56:33.197Z"
+    },
+    "todo:21": {
+      "task_key": "todo:21",
+      "task_label": "21",
+      "task_title": "Dashboard — Today's Overview",
+      "session_id": "ses_24037948fffeY2TRDXfKVPDATV",
+      "agent": "Sisyphus-Junior",
+      "category": "unspecified-high",
+      "updated_at": "2026-04-24T14:06:55.882Z"
+    },
+    "todo:22": {
+      "task_key": "todo:22",
+      "task_label": "22",
+      "task_title": "CloudKit Sharing (Spike + Implementation)",
+      "session_id": "ses_2402e8993ffedoab0aDfJSywH5",
+      "agent": "Sisyphus-Junior",
+      "category": "deep",
+      "updated_at": "2026-04-24T14:11:03.778Z"
+    },
+    "todo:23": {
+      "task_key": "todo:23",
+      "task_label": "23",
+      "task_title": "Global Search",
+      "session_id": "ses_2402a8648ffe7hG62L472HA49v",
+      "agent": "Sisyphus-Junior",
+      "category": "quick",
+      "updated_at": "2026-04-24T14:14:43.706Z"
+    },
+    "todo:24": {
+      "task_key": "todo:24",
+      "task_label": "24",
+      "task_title": "Settings + Onboarding",
+      "session_id": "ses_240274843ffepbVTU1y4I4QtXN",
+      "agent": "Sisyphus-Junior",
+      "category": "unspecified-high",
+      "updated_at": "2026-04-24T14:19:09.576Z"
     }
   }
 }
