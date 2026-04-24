@@ -11,12 +11,19 @@ For full private testing on your own phone, use **Xcode direct install** first.
 - An Apple ID signed into Xcode
 
 ### Fastest setup
-1. Open `RedSkySanctuary/RedSkySanctuary.xcodeproj` in Xcode.
-2. Plug in your iPhone and trust the Mac.
-3. In Xcode, choose your phone as the run destination.
-4. Turn on **Automatically manage signing** for the app target.
-5. Use your Apple ID team for signing.
-6. Build and run.
+1. Clone the repo to a local folder (e.g., `~/RedSky`):
+   ```bash
+   git clone https://github.com/Midorivi/redskysanctuary.git ~/RedSky
+   cd ~/RedSky
+   ```
+   *(You can use any folder name you prefer—`~/RedSky` is just an example.)*
+
+2. Open `RedSkySanctuary/RedSkySanctuary.xcodeproj` in Xcode.
+3. Plug in your iPhone and trust the Mac.
+4. In Xcode, choose your phone as the run destination.
+5. Turn on **Automatically manage signing** for the app target.
+6. Use your Apple ID team for signing.
+7. Build and run.
 
 ## Free Apple ID vs paid Apple Developer account
 
