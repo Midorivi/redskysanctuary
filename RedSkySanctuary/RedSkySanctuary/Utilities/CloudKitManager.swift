@@ -76,6 +76,34 @@ final class CloudKitManager {
     }
 
     static func makeContainer() -> ModelContainer {
+        // Default to local-only container for Personal Team compatibility
+        return makeLocalContainer()
+    }
+
+    static func makeLocalContainer() -> ModelContainer {
+        let schema = Schema([
+            Animal.self, AnimalPhoto.self,
+            HealthRecord.self, HealthSign.self,
+            TaskTemplate.self, TaskTemplateItem.self,
+            TaskInstance.self, TaskInstanceItem.self,
+            Reminder.self, MaintenanceTask.self,
+            InventoryItem.self, Expense.self,
+            EmergencyContact.self, EmergencyProtocol.self
+        ])
+        let config = ModelConfiguration(
+            "RedSkySanctuary",
+            schema: schema,
+            cloudKitDatabase: .none
+        )
+
+        do {
+            return try ModelContainer(for: schema, configurations: [config])
+        } catch {
+            fatalError("Failed to create local ModelContainer: \(error)")
+        }
+    }
+
+    static func makeCloudKitContainer() -> ModelContainer {
         let schema = Schema([
             Animal.self, AnimalPhoto.self,
             HealthRecord.self, HealthSign.self,
@@ -94,7 +122,7 @@ final class CloudKitManager {
         do {
             return try ModelContainer(for: schema, configurations: [config])
         } catch {
-            fatalError("Failed to create ModelContainer: \(error)")
+            fatalError("Failed to create CloudKit ModelContainer: \(error)")
         }
     }
 

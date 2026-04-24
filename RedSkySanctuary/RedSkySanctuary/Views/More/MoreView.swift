@@ -151,7 +151,7 @@ struct MoreView: View {
                         Text("Invite Team Member")
                             .font(.body)
                             .foregroundStyle(.primary)
-                        Text("Share sanctuary via iCloud")
+                        Text("Requires paid Apple Developer account")
                             .font(.subheadline)
                             .foregroundStyle(.secondary)
                     }
@@ -168,7 +168,7 @@ struct MoreView: View {
                 }
                 .padding(.vertical, 4)
             }
-            .disabled(isCreatingShare)
+            .disabled(true)
             .sensoryFeedback(.impact, trigger: showShareSheet)
         }
     }
